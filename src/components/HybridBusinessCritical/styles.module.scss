@@ -1,12 +1,31 @@
+.header {
+  text-align: center;
+  margin: auto;
+  width: 85%;
+}
+
 .box {
+  width: 85%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 2rem;
+  margin-top: 4rem;
   flex: 1;
   border-radius: 12px;
   background-color: rgba(46, 49, 143, 0.5);
   overflow: hidden;
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem;
+
+  @media screen and (max-width: 668px) {
+      grid-template-columns: 1fr;
+      margin-bottom: 20px;
+    }
+  }
 
   .price {
     padding: 1rem;
@@ -40,6 +59,7 @@
     list-style: none;
     display: flex;
     gap: 10px;
+    height: 3rem;
     align-items: baseline;
     svg {
       margin-top: 2px;
@@ -50,8 +70,39 @@
     span {
     }
   }
+
+  li:first-child {
+    height: 95px;
+  }
 }
 
+.buttons {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  @media screen and (max-width: 860px) {
+    flex-direction: column;
+  }
+
+  div {
+    height: 45px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+
+  .buttonGradient {
+    background-image: linear-gradient(45deg, #20e220 60%, #ffff00);
+    color: rgba(46, 49, 143);
+    font-weight: bold;
+  }
+}
 
 [data-theme='light'] {
   .box {
@@ -65,15 +116,12 @@
   .big {
     color: rgba(46, 49, 143);
   }
+
+  .buttonGradient {
+    background-image: none;
+    background-color: rgba(46, 49, 143);
+    color: #f5f5f5;
+  }
 }
 
 
-.checkIcon {
-  display: flex;
-  margin-top: 4px;
-  width: 18px;
-  height: 18px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url('../../../static/img/site/check.png');
-}

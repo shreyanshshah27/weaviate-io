@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 export default function PricingSandBox() {
   return (
@@ -11,19 +9,19 @@ export default function PricingSandBox() {
       </div>
       <div className={styles.featuresLong}>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} />{' '}
+          <div className={styles.checkIcon}></div>
           <span> Round robin region: AWS, Azure, GCP</span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} /> 30 days lifetime
+          <div className={styles.checkIcon}></div> 30 days lifetime
         </li>
       </div>
       <div className={styles.features}>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} /> Monitoring
+          <div className={styles.checkIcon}></div> Monitoring
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} />
+          <div className={styles.checkIcon}></div>
           <a href="https://join.slack.com/t/weaviate/shared_invite/zt-goaoifjr-o8FuVz9b1HLzhlUfyfddhw">
             {' '}
             Public Slack
@@ -32,12 +30,11 @@ export default function PricingSandBox() {
       </div>
       <div className={styles.features}>
         <li>
-          {' '}
-          <FontAwesomeIcon icon={faCircleCheck} /> Community support
+          <div className={styles.checkIcon}></div>
+          <span>Community support</span>
         </li>
         <li>
-          {' '}
-          <FontAwesomeIcon icon={faCircleCheck} /> Single AZ
+          <div className={styles.checkIcon}></div> Single AZ
         </li>
       </div>
     </div>

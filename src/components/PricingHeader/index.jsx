@@ -2,42 +2,43 @@ import Link from '@docusaurus/Link';
 import React from 'react';
 import styles from './styles.module.scss';
 
-export default function PricingHeader() {
+
+export default function PricingHeader({selectedType, handleSelected}) {
   return (
     <div className="container">
       <div className={styles.box}>
         <h1>
-          <span className={styles.header}>Weaviate</span> Cloud Services
+          <span className={styles.textGradient}>Weaviate</span>
         </h1>
-        <p>
-          Start for <span className={styles.header}>free</span> and{' '}
-          <span className={styles.header}>pay as you go</span> per{' '}
-          <span className={styles.header}>vector dimension</span> stored and
-          queried
-        </p>
-        <p>
-          All paid plans deliver unlimited capacity over three different tiers,
-          so your DBs may scale seamlessly
-        </p>
-        <p>
-          Starting from <span className={styles.header}>$0.05</span> per{' '}
-          <span className={styles.header}>1 million vector dimensions</span>
-        </p>
+        <h1>
+          Cloud Services
+        </h1>
+          <p>
+            Start for free and only pay for the vector dimensions you store and query. Upgrade to
+            one of our unlimited capacity plans starting at $0.05 per
+            1 million vector dimensions and scale seamlessly as your needs grow.
+          </p>
       </div>
-      <div className="container">
+       <div className='container'>
         <div className={styles.buttons}>
-          <Link className={styles.btn} to="#register">
-            Register for Private Beta
-          </Link>
-          <Link
-            className={styles.btn}
-            to="https://console.semi.technology"
-            target="_blank"
-          >
-            Create a free sandbox
-          </Link>
+          <div className={`${styles.border} ${selectedType === 'saas' ? styles.outline : null}`}>
+            <div className={styles.btn} onClick={() => handleSelected('saas')}>
+              <div className={styles.saasPng} />
+              <h1 className={styles.test}>SaaS</h1>
+              <p>Control you data, run and deploy the</p>
+              <p>software on your own private cloud.</p>
+            </div>
+          </div>
+          <div className={`${styles.border} ${selectedType === 'hybrid' ? styles.outline : null}`}>
+            <div className={styles.btn} onClick={() => handleSelected('hybrid')}>
+            <div className={styles.hybridPng} />
+            <h1 className={styles.test}>Hybrid SaaS</h1>
+            <p>We install Weaviate in your cloud and</p>
+            <p>manage your infrastructure.</p>
+          </div>
+          </div>
         </div>
-      </div>
+       </div>
     </div>
   );
 }

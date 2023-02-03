@@ -17,41 +17,41 @@ export default function PricingEnterprise() {
       </div>
       <div className={styles.features}>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} />{' '}
+          <div className={styles.checkIcon}></div>
           <span>
-            $0.100 per 1M vector dimensions stored or queried per month
+            $0.100 per 1M vector dimensions stored <br /> or queried per month
           </span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} /> <span>AWS, Azure, GCP</span>
+          <div className={styles.checkIcon}></div> <span>AWS, Azure, GCP</span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} />{' '}
+          <div className={styles.checkIcon}></div>
           <span>∞ lifetime (until terminated)</span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} />{' '}
+          <div className={styles.checkIcon}></div>
           <span>Hibernation after 8 hours</span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} /> <span>Monitoring</span>
+          <div className={styles.checkIcon}></div> <span>Monitoring</span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} />{' '}
-          <span>SeMI Slack or Teams / Email</span>
+          <div className={styles.checkIcon}></div>
+          <span>Weaviate Internal Slack or Teams / Email</span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} />{' '}
+          <div className={styles.checkIcon}></div>
           <span>
             Severity 1 - max 1h <br /> Severity 2 - max 4h <br /> Severity 3 -
             max 1bd
           </span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} /> <span>Multi AZ</span>
+          <div className={styles.checkIcon}></div> <span>Multi AZ</span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} /> <span>HA optional</span>
+          <div className={styles.checkIcon}></div> <span>HA optional</span>
         </li>
       </div>
     </div>

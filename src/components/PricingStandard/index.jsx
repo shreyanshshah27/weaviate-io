@@ -17,40 +17,40 @@ export default function PricingStandard() {
       </div>
       <div className={styles.features}>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} />{' '}
+          <div className={styles.checkIcon}></div>
           <span>
-            $0.050 per 1M vector dimensions stored or queried per month
+            $0.050 per 1M vector dimensions stored <br /> or queried per month
           </span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} />{' '}
+          <div className={styles.checkIcon}></div>
           <span>Round robin region: AWS, Azure, GCP</span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} />{' '}
+          <div className={styles.checkIcon}></div>
           <span>∞ lifetime (until terminated)</span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} />{' '}
+          <div className={styles.checkIcon}></div>
           <span>Hibernation after 1 hour</span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} /> <span>Monitoring</span>
+          <div className={styles.checkIcon}></div> <span>Monitoring</span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} /> <span>Public Slack</span>
+          <div className={styles.checkIcon}></div> <span>Public Slack</span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} />{' '}
+          <div className={styles.checkIcon}></div>
           <span>
-            Severity 1 - max 1h Severity 2 max 4h Severity 3 Severity 3 max 1bd
+            Severity 1 - max 1h Severity <br />  2 max 4h Severity <br />  3 Severity 3 max 1bd
           </span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} /> <span>Multi AZ</span>
+          <div className={styles.checkIcon}></div> <span>Multi AZ</span>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCircleCheck} /> <span>HA optional</span>
+          <div className={styles.checkIcon}></div> <span>HA optional</span>
         </li>
       </div>
     </div>
