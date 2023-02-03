@@ -125,3 +125,12 @@
 }
 
 
+.checkIcon {
+  display: flex;
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('../../../static/img/site/check.png');
+}
